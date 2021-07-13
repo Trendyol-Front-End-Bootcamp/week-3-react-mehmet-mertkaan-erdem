@@ -1,0 +1,41 @@
+label {
+  font-weight: bold;
+  color: rgb(211, 209, 209);
+}
+
+.filters-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.status-container,
+.gender-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+select {
+  appearance: none;
+  background-color: #330033;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+  text-align: center;
+  color: rgb(211, 209, 209);
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+option {
+  text-align: right;
+}

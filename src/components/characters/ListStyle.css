@@ -1,0 +1,6 @@
+.character-list {
+  display: flex;
+  margin: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

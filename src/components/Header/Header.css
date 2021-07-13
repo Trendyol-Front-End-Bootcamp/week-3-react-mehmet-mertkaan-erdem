@@ -1,0 +1,15 @@
+.header {
+  font-family: "Creepster", cursive;
+  background-color: rgba(98, 164, 171, 0.2);
+  color: rgb(98, 164, 171);
+  font-size: 4rem;
+  -webkit-text-stroke: 1px #f9bf1e;
+  width: 90%;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 20px auto;
+}
+
+.header span {
+  font-size: 2rem;
+}
