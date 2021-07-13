@@ -37,7 +37,6 @@ function Filter() {
       </div>
 
       <div className="gender-container">
-        <label htmlFor="gender">Gender</label>
         <select name="gender" id="gender" onChange={changeGender}>
           <option value="all">All</option>
           <option value="female">Female</option>
@@ -45,6 +44,7 @@ function Filter() {
           <option value="genderless">Genderless</option>
           <option value="unknown">Unknown</option>
         </select>
+        <label htmlFor="gender">Gender</label>
       </div>
     </div>
   );
