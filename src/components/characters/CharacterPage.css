@@ -13,7 +13,7 @@
 .character {
   display: flex;
   background-color: #faf9ef;
-  border: 2px solid #ff7b25;
+  border: 3px solid #f9bf1e;
   border-radius: 10px;
   width: 40vw;
   height: 50vh;
@@ -52,11 +52,13 @@ a {
 .info span {
   font-weight: bold;
   color: #62a4ab;
-  transition: 0.5s;
+  transition: 3s;
+  text-decoration: 3px underline;
+  text-decoration-color: #faf9ef;
 }
 
 .info span:hover {
-  transition: 0.5s;
+  transition: 0.2s;
   text-decoration: 3px underline;
   text-decoration-color: #f9bf1e;
 }
