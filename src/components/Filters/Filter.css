@@ -1,6 +1,8 @@
+@import "../../main.css";
+
 label {
   font-weight: bold;
-  color: #f9bf1e;
+  color: var(--secondary-color);
   padding: 10px;
 }
 
@@ -18,7 +20,7 @@ label {
   display: flex;
   align-items: center;
   width: 12%;
-  border: 1px solid rgb(98, 164, 171);
+  border: 1px solid var(--primary-color);
   box-shadow: 0px 0px 5px 0px rgba(98, 164, 171, 0.71);
   border-radius: 2px;
 }

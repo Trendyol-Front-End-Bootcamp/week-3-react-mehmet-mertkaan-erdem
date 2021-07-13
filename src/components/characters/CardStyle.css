@@ -1,22 +1,24 @@
+@import "../../main.css";
+
 .character-card {
   display: flex;
   flex-direction: column;
-  background-color: #faf9ef;
-  border: 3px solid #f9bf1e;
+  background-color: var(--card-background-color);
+  border: 3px solid var(--secondary-color);
   border-radius: 10px;
   width: 20vw;
   height: 60vh;
   margin: 10px 30px;
   justify-content: stretch;
   align-items: center;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 223, 237, 0.85);
-  box-shadow: 0px 0px 5px 0px rgba(255, 223, 237, 0.85);
+  -webkit-box-shadow: 0px 0px 5px 0px var(--box-shadow-color-two);
+  box-shadow: 0px 0px 5px 0px var(--box-shadow-color-two);
   transition: 0.5s;
 }
 
 .character-card:hover {
-  -webkit-box-shadow: 0px 0px 10px 1px #f9bf1e;
-  box-shadow: 0px 0px 10px 1px #f9bf1e;
+  -webkit-box-shadow: 0px 0px 10px 1px var(--box-shadow-color-one);
+  box-shadow: 0px 0px 10px 1px var(--box-shadow-color-one);
   transition: 0.5s;
 }
 
@@ -38,5 +40,5 @@ a {
 
 .character-info span {
   font-weight: bold;
-  color: #62a4ab;
+  color: var(--primary-color);
 }

@@ -1,0 +1,9 @@
+:root {
+  --primary-color: rgb(98, 164, 171);
+  --secondary-color: rgb(249, 191, 30);
+
+  --box-shadow-color-one: var(--secondary-color);
+  --box-shadow-color-two: rgba(255, 223, 237, 0.85);
+
+  --card-background-color: #faf9ef;
+}
