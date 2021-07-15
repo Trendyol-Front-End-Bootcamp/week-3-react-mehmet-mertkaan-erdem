@@ -4,7 +4,12 @@ import "./CardStyle.css";
 
 function CharacterCard({ character }) {
   return (
-    <Link to={`character/${character.name}`}>
+    // Link direkt karta verildiği için Link componenti ile sarıldı
+    <Link
+      to={`character/${character.name
+        .replace(/(\w+)\s(\w+)/, "$1-$2")
+        .toLowerCase()}`}
+    >
       <div className="character-card">
         <img
           className="character-image"
@@ -12,7 +17,6 @@ function CharacterCard({ character }) {
           alt={character.name}
         />
         <div className="character-info">
-          {/* <Link to="/"></Link> */}
           <p>
             <span>Name:</span> {character.name}
           </p>
