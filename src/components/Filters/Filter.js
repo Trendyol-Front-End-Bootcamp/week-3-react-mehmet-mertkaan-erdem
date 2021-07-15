@@ -1,22 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Filter.css";
 
-function Filter() {
-  const [status, setStatus] = useState("all");
-  const [gender, setGender] = useState("all");
-
+function Filter({ status, setStatus, gender, setGender }) {
   function changeStatus(e) {
     setStatus(e.target.value);
-    console.log(status);
   }
   function changeGender(e) {
     setGender(e.target.value);
-    console.log(gender, "Gender");
   }
-
-  useEffect(() => {
-    setStatus("all");
-  }, []);
 
   return (
     <div className="filters-container">
@@ -24,24 +15,29 @@ function Filter() {
         <label htmlFor="status">Status</label>
 
         <select
-          value={status}
           name="status"
           id="status"
+          value={status}
           onChange={changeStatus}
         >
-          <option value="all">All</option>
-          <option value="alive">Alive</option>
-          <option value="dead">Dead</option>
+          <option value="All">All</option>
+          <option value="Alive">Alive</option>
+          <option value="Dead">Dead</option>
           <option value="unknown">Unknown</option>
         </select>
       </div>
 
       <div className="gender-container">
-        <select name="gender" id="gender" onChange={changeGender}>
-          <option value="all">All</option>
-          <option value="female">Female</option>
-          <option value="male">Male</option>
-          <option value="genderless">Genderless</option>
+        <select
+          name="gender"
+          id="gender"
+          value={gender}
+          onChange={changeGender}
+        >
+          <option value="All">All</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Genderless">Genderless</option>
           <option value="unknown">Unknown</option>
         </select>
         <label htmlFor="gender">Gender</label>

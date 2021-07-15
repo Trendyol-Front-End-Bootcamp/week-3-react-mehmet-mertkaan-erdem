@@ -1,40 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./CharacterPage.css";
 
-const CharacterPage = ({ character, history }) => {
-  // let episodesArray = [];
-  // let episodeNames = [];
+function CharacterPage({ character }) {
+  const [episodes, setEpisodes] = useState([]);
 
-  // const handleClick = () => {
-  //   history.goBack();
-  // };
+  // Bölüm isimlerini yakalayabilmek için, Allah izin verirse
+  function getEpisodes() {
+    axios.get(`https://rickandmortyapi.com/api/episode/`).then((res) => {
+      setEpisodes(res.data.results);
+    });
+  }
 
-  // const getEpisodeArray = (count) => {
-  //   for (let i = 0; i < count; i++) {
-  //     episodesArray.push(character.episode[i]);
-  //   }
-  // };
-
-  // function getEpisodes() {
-  //   episodesArray.map((e) => {
-  //     axios.get(e).then((response) => {
-  //       episodeNames.push(response.data.name);
-  //     });
-  //   });
-  // }
-
-  // useEffect(() => {
-  //   getEpisodes();
-  //   console.log("useEffect", episodeNames);
-  // });
-
-  // let dizi;
+  useEffect(() => {
+    getEpisodes();
+  }, []);
 
   return (
     <div className="pageContainer">
       <h1 className="name">{character.name}</h1>
+
       {/* Bilgiler Başlangıç   */}
       <div className="character">
         <img className="image" src={character.image} alt={character.name} />
@@ -54,17 +40,23 @@ const CharacterPage = ({ character, history }) => {
           <p>
             <span>Status:</span> {character.status}
           </p>
-          <p>{/* <span>Episodes:</span> {character.episode} */}</p>
+          <ol className="episodes-list">
+            {episodes
+              .filter((episode) =>
+                episode.characters.includes(
+                  `https://rickandmortyapi.com/api/character/${character.id}`
+                )
+              )
+              .map((episode) => <li>{episode.name}</li>)
+              .slice(-5)}
+          </ol>
         </div>
       </div>
       <Link to="/">
         <button className="backButton">Back</button>
       </Link>
-
-      {/* <button onClick={getEpisodeArray(5)}>Episodes Array</button>
-      <button onClick={getEpisodes}>Name</button> */}
     </div>
   );
-};
+}
 
 export default CharacterPage;
