@@ -6,7 +6,7 @@ import "./CharacterPage.css";
 function CharacterPage({ character }) {
   const [episodes, setEpisodes] = useState([]);
 
-  // Bölüm isimlerini yakalayabilmek için, Allah izin verirse
+  // Bölüm isimlerini çekebilmek için fetching işlemi
   function getEpisodes() {
     axios.get(`https://rickandmortyapi.com/api/episode/`).then((res) => {
       setEpisodes(res.data.results);
@@ -17,6 +17,7 @@ function CharacterPage({ character }) {
     getEpisodes();
   }, []);
 
+  //Card componentine verilen linke tıklandığı zaman gelinen sayfa
   return (
     <div className="pageContainer">
       <h1 className="name">{character.name}</h1>

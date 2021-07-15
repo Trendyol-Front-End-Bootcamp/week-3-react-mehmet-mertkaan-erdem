@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Filter.css";
 
 function Filter({ status, setStatus, gender, setGender }) {
@@ -8,6 +8,8 @@ function Filter({ status, setStatus, gender, setGender }) {
   function changeGender(e) {
     setGender(e.target.value);
   }
+
+  //Filtreleme işlemlerini yakalayabilmek için oluşturulan dropdownlar ve fonksiyonlar
 
   return (
     <div className="filters-container">
