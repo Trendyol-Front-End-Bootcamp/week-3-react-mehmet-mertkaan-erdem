@@ -27,7 +27,7 @@ function CharacterCard({ character }) {
             <span>Gender:</span> {character.gender}
           </p>
           <p>
-            <span>Origin:</span> {character.origin.name}
+            <span>Origin:</span> {character?.origin?.name}
           </p>
           <p>
             <span>Status:</span> {character.status}

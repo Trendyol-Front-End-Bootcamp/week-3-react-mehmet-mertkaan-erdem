@@ -4,10 +4,11 @@ import "./ListStyle.css";
 import CharacterCard from "../Card/CharacterCard";
 
 // Karakter kartlarının toplandığı liste
-function CharactersList({ characters }) {
+function CharactersList() {
   const [status, setStatus] = useState("All");
   const [gender, setGender] = useState("All");
   const [filteredCharacters, setFilteredCharacters] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     setFilteredCharacters(
@@ -15,7 +16,12 @@ function CharactersList({ characters }) {
         .filter((character) => status === "All" || character.status === status)
         .filter((character) => gender === "All" || character.gender === gender)
     );
+    setLoading(false);
   }, [status, gender]);
+
+  if (isLoading) {
+    return <div className="loading">Loading...</div>;
+  }
 
   return (
     <>
