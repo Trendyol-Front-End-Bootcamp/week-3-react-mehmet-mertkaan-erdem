@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./CharacterPage.css";
 
+const BASE_URL = "https://rickandmortyapi.com/api/character/?name=";
 function CharacterPage(props) {
   const characterName = formatName(props.match.params.name);
   const [character, setCharacter] = useState({});
   const [episodes, setEpisodes] = useState([]);
 
   useEffect(() => {
-    getCharacter(characterName);
+    getCharacter(characterName); // eslint-disable-next-line
   }, []);
 
   async function getCharacter(characterName) {
-    const BASE_URL = "https://rickandmortyapi.com/api/character/?name=";
     await axios
       .get(BASE_URL + characterName)
       .then((response) => {
