@@ -2,11 +2,10 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Filter from "../components/Filters/Filter";
 import { BrowserRouter as Router } from "react-router-dom";
-
 const MockedFilterComponent = () => {
   return (
     <Router>
-      <Filter />
+      <Filter />;
     </Router>
   );
 };

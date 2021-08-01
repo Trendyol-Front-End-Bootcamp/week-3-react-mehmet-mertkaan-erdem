@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import "./CharacterPage.css";
 
@@ -41,7 +40,7 @@ function CharacterPage(props) {
   }
 
   function formatName(str) {
-    return str.split("-").join(" ");
+    return str?.split("-").join(" ");
   }
 
   return (

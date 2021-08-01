@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 const MockedCharacterPage = (params) => {
   return (
     <Router>
-      <CharacterPage params={params} />
+      <CharacterPage params={params} />;
     </Router>
   );
 };

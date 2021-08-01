@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import CharacterCard from "../components/Card/CharacterCard";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -41,7 +41,7 @@ const MockedCharacterCard = () => {
 };
 
 describe("Character Card", () => {
-  shallow(<MockedCharacterCard />);
+  render(<MockedCharacterCard />);
   it("should renders element", async () => {
     const characterItem = await screen.findAllByTestId(`character-card-test`);
     expect(characterItem).toBeTruthy();

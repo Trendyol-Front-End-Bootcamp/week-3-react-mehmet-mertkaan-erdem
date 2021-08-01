@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import "./CardStyle.css";
 
 function CharacterCard({ character }) {
+  let replacing = character?.name
+    ?.replace(/(\w+)\s(\w+)/, "$1-$2")
+    .toLowerCase();
   return (
     // Link direkt karta verildiği için Link componenti ile sarıldı
-    <Link
-      to={`character/${character.name
-        .replace(/(\w+)\s(\w+)/, "$1-$2")
-        .toLowerCase()}`}
-    >
+    <Link to={`character/${replacing}`}>
       <div className="character-card" data-testid="character-card-test">
         <img
           className="character-image"
