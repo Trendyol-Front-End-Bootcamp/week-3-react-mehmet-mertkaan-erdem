@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./CharacterPage.css";
 
+import BackButton from "../BackButton/BackButton";
+
 const BASE_URL = "https://rickandmortyapi.com/api/character/?name=";
+
 function CharacterPage(props) {
   const characterName = formatName(props.match.params.name);
   const [character, setCharacter] = useState({});
@@ -70,9 +73,7 @@ function CharacterPage(props) {
           </ol>
         </div>
       </div>
-      <Link to="/">
-        <button className="backButton">Back</button>
-      </Link>
+      <BackButton buttonTitle="Go Back" />
     </div>
   );
 }

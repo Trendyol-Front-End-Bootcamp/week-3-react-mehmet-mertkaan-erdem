@@ -103,20 +103,3 @@ a {
     color-stop(0.86, var(--box-shadow-color-two))
   );
 }
-
-.backButton {
-  font-family: "Creepster", cursive;
-  background-color: var(--card-background-color);
-
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-
-  font-size: 2rem;
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
-.backButton:active {
-  -webkit-text-stroke: 2px var(--secondary-color);
-}
