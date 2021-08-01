@@ -5,7 +5,7 @@ import "./Header.css";
 
 function Header() {
   return (
-    <Link to="/">
+    <Link to="/" data-testid="header-test">
       <h1 className="header">
         Rick <span>And</span> Morty
       </h1>

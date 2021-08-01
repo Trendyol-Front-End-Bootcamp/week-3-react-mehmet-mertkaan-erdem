@@ -12,7 +12,7 @@ function Filter({ status, setStatus, gender, setGender }) {
   //Filtreleme işlemlerini yakalayabilmek için oluşturulan dropdownlar ve fonksiyonlar
 
   return (
-    <div className="filters-container">
+    <div className="filters-container" data-testid="filter-test">
       <div className="status-container">
         <label htmlFor="status">Status</label>
 

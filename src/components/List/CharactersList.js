@@ -31,7 +31,7 @@ function CharactersList() {
         gender={gender}
         setGender={setGender}
       />
-      <div className="character-list">
+      <div className="character-list" data-testid="list-test">
         {filteredCharacters.map((character, i) => (
           <div key={i}>
             <CharacterCard character={character} />

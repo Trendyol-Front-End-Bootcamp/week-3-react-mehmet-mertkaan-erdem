@@ -10,7 +10,7 @@ function CharacterCard({ character }) {
         .replace(/(\w+)\s(\w+)/, "$1-$2")
         .toLowerCase()}`}
     >
-      <div className="character-card">
+      <div className="character-card" data-testid="character-card-test">
         <img
           className="character-image"
           src={character.image}

@@ -8,7 +8,7 @@ import BackButton from "../BackButton/BackButton";
 const BASE_URL = "https://rickandmortyapi.com/api/character/?name=";
 
 function CharacterPage(props) {
-  const characterName = formatName(props.match.params.name);
+  const characterName = formatName(props.match?.params?.name);
   const [character, setCharacter] = useState({});
   const [episodes, setEpisodes] = useState([]);
 
@@ -45,7 +45,7 @@ function CharacterPage(props) {
   }
 
   return (
-    <div className="pageContainer">
+    <div className="pageContainer" data-testid="character-page-test">
       <h1 className="name">{character.name}</h1>
       {/* Bilgiler Başlangıç   */}
       <div className="character">
