@@ -10,4 +10,4 @@ async function getCharacters() {
   });
 }
 
-export default getCharacters;
+export { getCharacters };
